@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius:15px;
+    width: 300px;
+    height: auto;
+    transition: border-radius 0.5s ease-out;
+    margin: 50px auto;
+}
+
+.container:hover{
+    background-color:steelblue;
+    color:black;
+    cursor: pointer;
+    border-radius:0;
+}

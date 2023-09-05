@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 20px;
+}
+
+h1{
+    color:darkgreen;
+}
+p{
+    font-weight: bold;
+}
+
+ul{
+    list-style: none;
+    margin: 10px 0;
+}
+
+ul:hover span{
+    animation-name: textAnimation;
+    animation-duration:2s ;
+    animation-delay: calc(0.3s * var(--i));
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes textAnimation {
+    from{
+        font-size: 16px;
+    }
+
+    to{
+        font-size: 32px;
+        color:darkgreen;
+    }
+}

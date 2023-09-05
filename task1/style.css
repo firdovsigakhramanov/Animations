@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100dvh;
+  position: relative;
+  padding: 0 5%;
+  /* &:hover > .pink {
+    animation-name: boxAnimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  } */
+
+  /* &:hover .green {
+    animation-name: boxAnimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  &:hover .blue {
+    animation-name: boxAnimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  } */
+}
+
+button {
+  position: absolute;
+  bottom: 30%;
+  background-color: darkgreen;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  color:white;
+  font-weight: bold;
+}
+
+ 
+button:focus{
+  background-color:red;
+  color:white
+}
+
+button:focus ~ .pink {
+  animation-name: boxAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+button:focus ~ .pink > .green {
+  animation-name: boxAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+button:focus ~ .pink > .green > .blue {
+  animation-name: boxAnimation;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.pink {
+  background-color: pink;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  background-color: green;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes boxAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(720deg);
+  }
+}

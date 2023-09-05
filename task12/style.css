@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+.container:hover .box {
+  animation-name: boxAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+@keyframes boxAnimation {
+  0% {
+    background-color: gold;
+  }
+
+  25% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: green;
+  }
+
+  75% {
+    background-color: darkcyan;
+  }
+
+  100% {
+    background-color:black;
+  }
+}

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+
+  &:hover div {
+    animation-name: boxAnimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.container div {
+  background-color: red;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes boxAnimation {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+
+  25% {
+    top: 0px;
+    left: 50%;
+  }
+
+  50% {
+    top: 100%;
+    left: 50%;
+  }
+
+  75% {
+    top: 100%;
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}

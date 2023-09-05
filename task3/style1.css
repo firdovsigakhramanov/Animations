@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+}
+
+.container > div:first-child {
+  background-color: red;
+  width: 30%;
+  height: 15vh;
+  margin-bottom: 20px;
+  transition: width 3s linear;
+}
+
+.container > div:nth-child(2) {
+  background-color: blue;
+  width: 30%;
+  height: 15vh;
+  transition: width 3s ease-in-out;
+  transition-delay: 3s;
+}
+
+.container:hover div {
+  width: 100%;
+}
